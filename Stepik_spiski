@@ -1,0 +1,10 @@
+a = [int(i) for i in input().split()]
+a.sort()
+if len(a) > 1:
+    for i in range(len(a)-1):
+        if a[i] != a[i+1] and a[i-1] == a[i]:
+            print(a[i], end=' ')
+    if a[-1] == a[-2]:
+        print(a[-1])
+else:
+    print()

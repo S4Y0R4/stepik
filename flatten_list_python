@@ -1,0 +1,14 @@
+#Выравнивание рекурсией списков всех уровней Python
+
+lst = [1, 2, 3, [4, 5, [6]], 7]
+
+def f(lst):
+    a = []
+    for x in lst:
+        if isinstance(x, list):
+            a.extend(f(x))
+        else:
+            a.append(x)
+    return a
+
+print(f(lst))
